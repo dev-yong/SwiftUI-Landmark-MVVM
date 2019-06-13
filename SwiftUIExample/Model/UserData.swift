@@ -19,7 +19,9 @@ final class UserData: BindableObject  {
         }
     }
     
-    var landmarks: [Landmark] = JSONReader().load("Landmark") {
+    @UserDefault(key: "Landmarks",
+                 default: JSONReader().load("Landmark"))
+    var landmarks: [Landmark]  {
         didSet {
             didChange.send(self)
         }
