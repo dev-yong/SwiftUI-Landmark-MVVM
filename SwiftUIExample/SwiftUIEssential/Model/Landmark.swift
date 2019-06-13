@@ -10,8 +10,6 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-let landmarks: [Landmark] = JSONReader().load("Landmark")
-
 struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
@@ -20,6 +18,8 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var park: String
     var category: Category
+    var isFavorite: Bool
+    var isFeatured: Bool
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,
@@ -29,6 +29,17 @@ struct Landmark: Hashable, Codable, Identifiable {
         case featured = "Featured"
         case lakes = "Lakes"
         case rivers = "Rivers"
+        case mountains = "Mountains"
     }
 }
 
+let mockLandmark = Landmark(id: 1001,
+                            name: "Turtle Rock",
+                            imageName: "turtlerock",
+                            coordinates: Coordinates(latitude: -116.166868,
+                                                     longitude: 34.011286),
+                            state: "California",
+                            park: "Joshua Tree National Park",
+                            category: .rivers,
+                            isFavorite: true,
+                            isFeatured: true)

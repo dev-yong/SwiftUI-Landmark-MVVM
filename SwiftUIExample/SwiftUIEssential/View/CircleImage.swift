@@ -25,7 +25,7 @@ struct CircleImage : View {
 #if DEBUG
 struct CircleImage_Previews : PreviewProvider {
     static var previews: some View {
-        CircleImage(image: Image(landmarks[1].imageName))
+        CircleImage(image: Image(mockLandmark.imageName))
     }
 }
 #endif
