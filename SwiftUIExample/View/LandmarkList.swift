@@ -23,9 +23,15 @@ struct LandmarkList : View {
                             LandmarkRow(landmark: landmark)
                         }
                     }
+                }.onDelete {
+                        self.deleteLandmark(indexSet: $0)
                 }
-            }
-            .navigationBarTitle(Text("Landmarks"))
+            }.navigationBarTitle(Text("Landmarks"))
+        }
+    }
+    private func deleteLandmark(indexSet: IndexSet) {
+        indexSet.forEach {
+            userData.landmarks.remove(at: $0)
         }
     }
 }
@@ -35,11 +41,11 @@ struct LandmarkList_Previews : PreviewProvider {
     static var previews: some View {
         return LandmarkList()
             .environmentObject(UserData())
-//        ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
-//            LandmarkList()
-//                .previewDevice(PreviewDevice(rawValue: deviceName))
-//                .previewDisplayName(deviceName)
-//        }
+        //        ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
+        //            LandmarkList()
+        //                .previewDevice(PreviewDevice(rawValue: deviceName))
+        //                .previewDisplayName(deviceName)
+        //        }
     }
 }
 #endif
