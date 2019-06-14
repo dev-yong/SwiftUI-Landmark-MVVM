@@ -9,11 +9,20 @@
 import SwiftUI
 
 struct LandmarkList : View {
-    @EnvironmentObject private var userData: UserData
+    @EnvironmentObject
+    private var userData: UserData
+    @EnvironmentObject
+    private var theme: Theme
     
     var body: some View {
         NavigationView {
             List {
+                SegmentedControl(selection: $theme.selectedIndex) {
+                    ForEach(0..<self.theme.colorSchemes.count) {
+                        Text(self.theme.colorSchemes[$0].description)
+                            .tag($0)
+                    }
+                }
                 Toggle(isOn: $userData.showFavoritesOnly) {
                     Text("Favorites only")
                 }
@@ -23,12 +32,14 @@ struct LandmarkList : View {
                             LandmarkRow(landmark: landmark)
                         }
                     }
-                }.onDelete {
+                    }.onDelete {
                         self.deleteLandmark(indexSet: $0)
                 }
-            }.navigationBarTitle(Text("Landmarks"))
+            }
+                .navigationBarTitle(Text("Landmarks"))
         }
     }
+    
     private func deleteLandmark(indexSet: IndexSet) {
         indexSet.forEach {
             userData.landmarks.remove(at: $0)
@@ -40,6 +51,7 @@ struct LandmarkList : View {
 struct LandmarkList_Previews : PreviewProvider {
     static var previews: some View {
         return LandmarkList()
+            .environmentObject(Theme())
             .environmentObject(UserData())
         //        ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
         //            LandmarkList()

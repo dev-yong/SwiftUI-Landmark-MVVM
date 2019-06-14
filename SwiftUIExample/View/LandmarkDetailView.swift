@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct LandmarkDetailView: View {
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     @EnvironmentObject private var userData: UserData
     let landmark: Landmark
     private var landmarkIndex: Int {
@@ -36,7 +37,7 @@ struct LandmarkDetailView: View {
                     }) {
                         if self.userData.landmarks[self.landmarkIndex].isFavorite {
                             Image(systemName: "star.fill")
-                                .foregroundColor(Color.yellow)
+                                .foregroundColor(colorScheme == .light ? .yellow : .white)
                         } else {
                             Image(systemName: "star")
                                 .foregroundColor(Color.gray)

@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct LandmarkRow : View {
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     let landmark: Landmark
     var body: some View {
         HStack {
@@ -21,7 +22,7 @@ struct LandmarkRow : View {
             if landmark.isFavorite {
                 Image(systemName: "star.fill")
                     .imageScale(.medium)
-                    .foregroundColor(.yellow)
+                    .foregroundColor(colorScheme == .light ? .yellow : .white)
             }
         }
     }

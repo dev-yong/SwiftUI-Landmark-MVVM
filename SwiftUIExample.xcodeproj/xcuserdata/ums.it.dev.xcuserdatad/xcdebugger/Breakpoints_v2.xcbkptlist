@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4A4CF0AB-8940-436E-A272-FE2076ECEB1D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DFA74871-7BBE-4F9E-8214-590B624D69CE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/View/LandmarkList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "DFA74871-7BBE-4F9E-8214-590B624D69CE - af6cb521049a90f0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIExample.LandmarkList.body.getter : some"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ums.it.dev/SwiftUIExample/SwiftUIExample/View/LandmarkList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "470">
+               </Location>
+               <Location
+                  uuid = "DFA74871-7BBE-4F9E-8214-590B624D69CE - fb514410b340294b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.NavigationView&lt;SwiftUI._AutoResultView&lt;SwiftUI.List&lt;Swift.Never, SwiftUI.TupleView&lt;(SwiftUI.Toggle&lt;SwiftUI.Text&gt;, SwiftUI._ModifiedContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;SwiftUIExample.Landmark&gt;, Swift.Optional&lt;SwiftUI.NavigationButton&lt;SwiftUIExample.LandmarkRow, SwiftUIExample.LandmarkDetailView&gt;&gt;&gt;, SwiftUI._TraitWritingModifier&lt;Swift.Optional&lt;(Foundation.IndexSet) -&gt; ()&gt;&gt;&gt;)&gt;&gt;&gt;&gt; in SwiftUIExample.LandmarkList.body.getter : some"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ums.it.dev/SwiftUIExample/SwiftUIExample/View/LandmarkList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27D8360C-D40E-4D2E-BF59-E09C4789D0D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/View/LandmarkDetailView2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5166911-32D8-46B1-B540-A5C4FC25CD37"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/View/LandmarkDetailView2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
