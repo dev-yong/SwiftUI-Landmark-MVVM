@@ -15,7 +15,6 @@ struct LandmarkList : View {
     private var theme: Theme
     
     var body: some View {
-        NavigationView {
             List {
                 SegmentedControl(selection: $theme.selectedIndex) {
                     ForEach(0..<self.theme.colorSchemes.count) {
@@ -37,7 +36,6 @@ struct LandmarkList : View {
                 }
             }
                 .navigationBarTitle(Text("Landmarks"))
-        }
     }
     
     private func deleteLandmark(indexSet: IndexSet) {

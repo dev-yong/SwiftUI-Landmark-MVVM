@@ -9,6 +9,23 @@
 import SwiftUI
 import Combine
 
+extension ColorScheme: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .light: return "Light"
+        case .dark: return "Dark"
+        @unknown default:
+            fatalError()
+        }
+    }
+}
+
+extension ColorScheme: Identifiable {
+    public var id: String {
+        self.description
+    }
+}
+
 final class Theme: BindableObject {
     let didChange = PassthroughSubject<Theme, Never>()
     
