@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct FeaturedLandmarksView : View {
-    var landmarks: [Landmark]
+    var viewModel: FeaturedLandmarksViewModel
     var body: some View {
-        Image(landmarks[0].imageName)
+        Image(viewModel.itemViewModels[0].imageName)
             .resizable()
 //            .frame(height: 250)
     }
@@ -20,7 +20,7 @@ struct FeaturedLandmarksView : View {
 #if DEBUG
 struct FeaturedLandmarksView_Previews : PreviewProvider {
     static var previews: some View {
-        FeaturedLandmarksView(landmarks: [mockLandmark])
+        FeaturedLandmarksView(viewModel: FeaturedLandmarksViewModel(landmarks: [mockLandmark]))
     }
 }
 #endif

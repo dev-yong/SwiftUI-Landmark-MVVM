@@ -9,10 +9,11 @@
 import SwiftUI
 
 struct ContentView : View {
+    var viewModel: LandmarkListViewModel
     @EnvironmentObject
     private var theme: Theme
     var body: some View {
-        LandmarkList()
+        LandmarkList(viewModel: viewModel)
             .colorScheme(theme.colorScheme)
     }
 
@@ -21,8 +22,7 @@ struct ContentView : View {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .environmentObject(UserData())
+        ContentView(viewModel: LandmarkListViewModel(landmarks: [mockLandmark]))
             .environmentObject(Theme())
     }
 }

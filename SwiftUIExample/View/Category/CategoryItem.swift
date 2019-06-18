@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct CategoryItem : View {
-    var landmark: Landmark
+    var viewModel: LandmarkItemViewModel
     var body: some View {
         VStack(alignment: .leading) {
-            Image(landmark.imageName)
+            Image(viewModel.imageName)
                 .resizable()
                 .renderingMode(.original)
                 .frame(width: 155, height: 155)
                 .cornerRadius(5)
-            Text(landmark.name)
+            Text(viewModel.name)
                 .color(.primary)
                 .font(.caption)
         }
@@ -28,7 +28,7 @@ struct CategoryItem : View {
 #if DEBUG
 struct CategoryItem_Previews : PreviewProvider {
     static var previews: some View {
-        CategoryItem(landmark: mockLandmark)
+        CategoryItem(viewModel: LandmarkItemViewModel(landmark: mockLandmark))
             .previewLayout(.fixed(width: 200, height: 200))
     }
 }

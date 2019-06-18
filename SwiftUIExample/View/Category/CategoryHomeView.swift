@@ -9,27 +9,20 @@
 import SwiftUI
 
 struct CategoryHomeView : View {
-    var categories = [String: [Landmark]].init(grouping: [mockLandmark],
-                                               by: { $0.category.rawValue
-    })
-    var featuredLandmarks: [Landmark] {
-        [mockLandmark].filter { $0.isFeatured }
-    }
+    @ObjectBinding var viewModel: CategoryViewModel
     var body: some View {
         NavigationView {
             List {
-                FeaturedLandmarksView(landmarks: featuredLandmarks) 
+                FeaturedLandmarksView(viewModel: viewModel.featuredLandmarksViewModel)
                     .scaledToFill()
                     .frame(height: 200)
                     .clipped()
                     .listRowInsets(EdgeInsets())
-                ForEach(categories.keys.sorted().identified(by: \.self)) {
-                    CategoryRow(categoryName: $0,
-                                items: self.categories[$0] ?? [])
+                ForEach(viewModel.categoryRowViewModel) {
+                    CategoryRow(viewModel: $0)
                 }
                 .listRowInsets(EdgeInsets())
-                
-                NavigationButton(destination: LandmarkList()) {
+                NavigationButton(destination: ContentView(viewModel: viewModel.landmarkListViewModel)) {
                     Text("See All")
                 }
             }.navigationBarTitle(Text("Featured"))
@@ -40,7 +33,7 @@ struct CategoryHomeView : View {
 #if DEBUG
 struct CategoryHomeView_Previews : PreviewProvider {
     static var previews: some View {
-        CategoryHomeView()
+        CategoryHomeView(viewModel: CategoryViewModel())
     }
 }
 #endif

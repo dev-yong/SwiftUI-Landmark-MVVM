@@ -9,21 +9,20 @@
 import SwiftUI
 
 struct CategoryRow : View {
-    var categoryName: String
-    var items: [Landmark]
+    var viewModel: CategoryRowViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(self.categoryName)
+            Text(viewModel.categoryName)
                 .font(.headline)
                 .padding(.leading, 15)
                 .padding(.top, 5)
             
             ScrollView(showsHorizontalIndicator: false) {
                 HStack(alignment: .top, spacing: 0) {
-                    ForEach(self.items) { landmark in
-                        NavigationButton(destination: LandmarkDetailView(landmark: landmark)) {
-                            CategoryItem(landmark: landmark)
+                    ForEach(viewModel.itemViewModels) { itemViewModel in
+                        NavigationButton(destination: LandmarkDetailView(viewModel: itemViewModel)) {
+                            CategoryItem(viewModel: itemViewModel)
                         }
                     }
                 }
@@ -34,13 +33,11 @@ struct CategoryRow : View {
 }
 
 
-
-
 #if DEBUG
 struct CategoryRow_Previews : PreviewProvider {
     static var previews: some View {
-        CategoryRow(categoryName: mockLandmark.category.rawValue,
-                    items: [mockLandmark])
+        CategoryRow(viewModel: CategoryRowViewModel(categoryName: mockLandmark.category.rawValue,
+                                                    landmarks: [mockLandmark]))
     }
 }
 #endif

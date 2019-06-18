@@ -10,16 +10,16 @@ import SwiftUI
 
 struct LandmarkRow : View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
-    let landmark: Landmark
+    var viewModel: LandmarkItemViewModel
     var body: some View {
         HStack {
-            Image(landmark.imageName)
+            Image(viewModel.imageName)
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text(landmark.name)
+            Text(viewModel.name)
             Spacer()
 
-            if landmark.isFavorite {
+            if viewModel.isFavorite {
                 Image(systemName: "star.fill")
                     .imageScale(.medium)
                     .foregroundColor(colorScheme == .light ? .yellow : .white)
@@ -31,7 +31,7 @@ struct LandmarkRow : View {
 #if DEBUG
 struct LandmarkRow_Previews : PreviewProvider {
     static var previews: some View {
-        LandmarkRow(landmark: mockLandmark)
+        LandmarkRow(viewModel: LandmarkItemViewModel(landmark: mockLandmark))
             .previewLayout(.fixed(width: 300, height: 70))
     }
 }
