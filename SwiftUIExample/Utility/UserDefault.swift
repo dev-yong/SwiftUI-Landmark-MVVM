@@ -8,7 +8,7 @@
 
 import Foundation
 
-@propertyDelegate
+@propertyWrapper
 struct UserDefault<Value: Codable> {
     let key: String
     let `default`: Value
