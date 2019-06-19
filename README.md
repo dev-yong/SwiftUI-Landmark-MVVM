@@ -1,8 +1,12 @@
 # SwiftUIExample (WIP)
 
-이 Repository는 Apple의 공식 문서인 [SwiftUI 튜토리얼](https://developer.apple.com/tutorials/swiftui) 을 기반하여, 개인 공부를 목적으로 재구현되었습니다.
+이 Repository는 Apple의 공식 문서인 [SwiftUI 튜토리얼](https://developer.apple.com/tutorials/swiftui) 을 기반하여,  `MVVM`, `EnvironmentObject`, `ObjectBinding`,  `BindableObject` , `Combine`, `propertyWrapper` 등에 대한 개인 공부를 목적으로 재구현되었습니다.
 
-내용에 대한 자세한 사항은 [Wiki](../../../wiki) 를 확인해주세요.
+
+
+내용에 대한 자세한 사항은 [Wiki](https://github.com/LeeGwangYong/SwiftUIExample/wiki) 를 확인해주세요.
+
+
 
 PR과 Issue는 항상 환영합니다.
 
