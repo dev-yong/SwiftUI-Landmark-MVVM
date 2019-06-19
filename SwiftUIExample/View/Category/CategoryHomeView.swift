@@ -13,17 +13,21 @@ struct CategoryHomeView : View {
     var body: some View {
         NavigationView {
             List {
-                FeaturedLandmarksView(viewModel: viewModel.featuredLandmarksViewModel)
-                    .scaledToFill()
-                    .frame(height: 200)
-                    .clipped()
-                    .listRowInsets(EdgeInsets())
-                ForEach(viewModel.categoryRowViewModel) {
+                if viewModel.featuredLandmarksViewModel != nil {
+                    FeaturedLandmarksView(viewModel: viewModel.featuredLandmarksViewModel!)
+                        .scaledToFit()
+                        .frame(height: 200)
+                        .clipped()
+                        .listRowInsets(EdgeInsets())
+                }
+                ForEach(viewModel.categoryRowViewModels) {
                     CategoryRow(viewModel: $0)
                 }
                 .listRowInsets(EdgeInsets())
-                NavigationButton(destination: ContentView(viewModel: viewModel.landmarkListViewModel)) {
-                    Text("See All")
+                if viewModel.landmarkListViewModel != nil {
+                    NavigationButton(destination: ContentView(viewModel: $viewModel.landmarkListViewModel)) {
+                        Text("See All")
+                    }
                 }
             }.navigationBarTitle(Text("Featured"))
         }

@@ -11,6 +11,7 @@ import SwiftUI
 struct LandmarkRow : View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     var viewModel: LandmarkItemViewModel
+    
     var body: some View {
         HStack {
             Image(viewModel.imageName)

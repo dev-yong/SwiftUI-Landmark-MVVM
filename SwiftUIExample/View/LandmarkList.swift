@@ -29,20 +29,11 @@ struct LandmarkList : View {
                 NavigationButton(destination: LandmarkDetailView(viewModel: itemViewModel)) {
                     LandmarkRow(viewModel: itemViewModel)
                 }
-                //                    }
-                //                    }.onDelete {
-                //                        self.deleteLandmark(indexSet: $0)
-                //                }
+            }.onDelete {
+                self.viewModel.preformRemoveLandmark(indexes: $0.map { $0 })
             }
-            
         }.navigationBarTitle(Text("Landmarks"))
     }
-    
-    //    private func deleteLandmark(indexSet: IndexSet) {
-    //        indexSet.forEach {
-    //            userData.landmarks.remove(at: $0)
-    //        }
-    //    }
 }
 
 #if DEBUG

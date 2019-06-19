@@ -13,7 +13,7 @@ struct FeaturedLandmarksView : View {
     var body: some View {
         Image(viewModel.itemViewModels[0].imageName)
             .resizable()
-//            .frame(height: 250)
+            .frame(height: 250)
     }
 }
 

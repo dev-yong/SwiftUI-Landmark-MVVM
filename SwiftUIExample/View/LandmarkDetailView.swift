@@ -29,7 +29,7 @@ struct LandmarkDetailView: View {
                     Text(viewModel.name)
                         .font(.title)
                     Button(action: {
-//                        self.userData.landmarks[self.landmarkIndex].isFavorite.toggle()
+                        self.viewModel.preformToggleFavorite()
                     }) {
                         if viewModel.isFavorite {
                             Image(systemName: "star.fill")
