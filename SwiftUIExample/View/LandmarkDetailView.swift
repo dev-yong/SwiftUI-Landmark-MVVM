@@ -40,18 +40,6 @@ struct LandmarkDetailView: View {
                         }
                     }
 
-//                    Button(action: {
-//                        self.userData.landmarks[self.landmarkIndex].isFavorite.toggle()
-//                    }) {
-//                        if self.userData.landmarks[self.landmarkIndex].isFavorite {
-//                            Image(systemName: "star.fill")
-//                                .foregroundColor(colorScheme == .light ? .yellow : .white)
-//                        } else {
-//                            Image(systemName: "star")
-//                                .foregroundColor(Color.gray)
-//                        }
-//                    }
-
                 }
                 HStack {
                     Text(viewModel.park)
