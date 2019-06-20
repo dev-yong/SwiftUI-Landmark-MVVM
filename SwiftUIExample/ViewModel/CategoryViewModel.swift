@@ -12,34 +12,28 @@ import Combine
 final class CategoryViewModel: BindableObject {
     let didChange = PassthroughSubject<CategoryViewModel, Never>()
     
-    @UserDefault(key: "Landmarks",
-                 default: JSONReader().load("Landmark"))
+    @UserDefault(key: "Landmarks", default: JSONReader().load("Landmark"))
     private var landmarks: [Landmark]  {
         didSet {
             didChange.send(self)
         }
     }
+    
+    private var repository: Repository<Landmark>!
+    
     private var cancellables: [Cancellable] = []
-    lazy var toggleFavorite: (Landmark) -> () = { [weak self] landmark in
-        guard let index = self?.landmarks.firstIndex(where: {
-            $0.id == landmark.id
-        }) else {
-            return
-        }
-        self?.landmarks[index].isFavorite.toggle()
-    }
-    lazy var removeLandmark: (Landmark) -> () = { [weak self] landmark in
-        self?.landmarks.removeAll { $0.id == landmark.id }
-    }
     init() {
+        repository = Repository(key: "Landmark", default: JSONReader().load("Landmark"))
+        
         let didChangeCancellable = didChange.map { viewModel -> (FeaturedLandmarksViewModel, [CategoryRowViewModel], LandmarkListViewModel) in
-            let featuredLandmarksViewModel = FeaturedLandmarksViewModel(landmarks: viewModel.featuredLandmarks)
+            let featuredLandmarksViewModel = FeaturedLandmarksViewModel(landmarks: viewModel.featuredLandmarks,
+                                                                        repository: viewModel.repository)
             let categoryRowViewModels = viewModel.landmarkDictionary.map {
-                CategoryRowViewModel(categoryName: $0.key, landmarks: $0.value)
+                CategoryRowViewModel(categoryName: $0.key,
+                                     landmarks: $0.value,
+                                     repository: viewModel.repository)
                 }.sorted { $0.id < $1.id }
-            let landmarkListViewModel = LandmarkListViewModel(landmarks: viewModel.landmarks,
-                                                              toggleFavorite: self.toggleFavorite,
-                                                              removeLandmark: self.removeLandmark)
+            let landmarkListViewModel = LandmarkListViewModel(repository: viewModel.repository)
             return (featuredLandmarksViewModel, categoryRowViewModels, landmarkListViewModel)
             }.sink {
                 self.featuredLandmarksViewModel = $0.0
@@ -57,9 +51,9 @@ final class CategoryViewModel: BindableObject {
             $0.category.rawValue
         }
     }
-    var featuredLandmarksViewModel: FeaturedLandmarksViewModel!
+    var featuredLandmarksViewModel: FeaturedLandmarksViewModel?
     
     var categoryRowViewModels: [CategoryRowViewModel] = []
     
-    var landmarkListViewModel: LandmarkListViewModel!
+    var landmarkListViewModel: LandmarkListViewModel?
 }

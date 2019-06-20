@@ -21,7 +21,7 @@ struct CategoryRow : View {
             ScrollView(showsHorizontalIndicator: false) {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(viewModel.itemViewModels) { itemViewModel in
-                        NavigationButton(destination: LandmarkDetailView(viewModel: itemViewModel)) {
+                        NavigationButton(destination: LandmarkDetailView(viewModel: itemViewModel.detailViewModel)) {
                             CategoryItem(viewModel: itemViewModel)
                         }
                     }
@@ -37,7 +37,8 @@ struct CategoryRow : View {
 struct CategoryRow_Previews : PreviewProvider {
     static var previews: some View {
         CategoryRow(viewModel: CategoryRowViewModel(categoryName: mockLandmark.category.rawValue,
-                                                    landmarks: [mockLandmark]))
+                                                    landmarks: [mockLandmark],
+                                                    repository: mockRepository))
     }
 }
 #endif

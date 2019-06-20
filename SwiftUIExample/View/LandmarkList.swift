@@ -25,9 +25,9 @@ struct LandmarkList : View {
             Toggle(isOn: $viewModel.showFavoritesOnly) {
                 Text("Favorites only")
             }
-            ForEach(viewModel.itemViewModels) { itemViewModel in
-                NavigationButton(destination: LandmarkDetailView(viewModel: itemViewModel)) {
-                    LandmarkRow(viewModel: itemViewModel)
+            ForEach(viewModel.cellViewModels) { cellViewModel in
+                NavigationButton(destination: LandmarkDetailView(viewModel: cellViewModel.detailViewModel)) {
+                    LandmarkRow(viewModel: cellViewModel)
                 }
             }.onDelete {
                 self.viewModel.preformRemoveLandmark(indexes: $0.map { $0 })
@@ -39,7 +39,7 @@ struct LandmarkList : View {
 #if DEBUG
 struct LandmarkList_Previews : PreviewProvider {
     static var previews: some View {
-        return LandmarkList(viewModel: LandmarkListViewModel(landmarks: [mockLandmark]))
+        return LandmarkList(viewModel: LandmarkListViewModel(repository: mockRepository))
             .environmentObject(Theme())
         //        ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
         //            LandmarkList()

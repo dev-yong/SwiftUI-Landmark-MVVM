@@ -7,3 +7,29 @@
 //
 
 import Foundation
+import SwiftUI
+final class LandmarkCellViewModel: Identifiable {
+    private weak var repository: Repository<Landmark>!
+    private var landmark: Landmark
+    var detailViewModel: LandmarkDetailViewModel
+    init(landmark: Landmark,
+         repository: Repository<Landmark>) {
+        self.landmark = landmark
+        self.repository = repository
+        detailViewModel = LandmarkDetailViewModel(landmark: landmark,
+                                                  repository: repository)
+    }
+    
+    var id: Int {
+        return landmark.id
+    }
+    var imageName: String {
+        return landmark.imageName
+    }
+    var name: String {
+        return landmark.name
+    }
+    var isFavorite: Bool {
+        return landmark.isFavorite
+    }
+}

@@ -13,13 +13,21 @@ final class CategoryRowViewModel: Identifiable {
         return categoryName
     }
     private let landmarks: [Landmark]
+    private weak var repository: Repository<Landmark>!
+
     let categoryName: String
-    var itemViewModels: [LandmarkItemViewModel] {
-        return landmarks.map { LandmarkItemViewModel(landmark: $0) }
+    var itemViewModels: [LandmarkCellViewModel] {
+        return landmarks.map {
+            LandmarkCellViewModel(landmark: $0,
+                                  repository: self.repository)
+            
+        }
     }
     init(categoryName: String,
-         landmarks: [Landmark]) {
+         landmarks: [Landmark],
+         repository: Repository<Landmark>) {
         self.categoryName = categoryName
         self.landmarks = landmarks
+        self.repository = repository
     }
 }

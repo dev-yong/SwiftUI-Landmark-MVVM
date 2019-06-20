@@ -10,15 +10,8 @@ import SwiftUI
 import Combine
 import CoreLocation
 
-final class LandmarkDetailViewModel: BindableObject {
-    var didChange = PassthroughSubject<LandmarkDetailViewModel, Never>()
-    
-    @UserDefault(key: "Landmarks", default: JSONReader().load("Landmark"))
-    private var landmarks: [Landmark] {
-        didSet {
-            self.didChange.send(self)
-        }
-    }
+final class LandmarkDetailViewModel {
+    private weak var repository: Repository<Landmark>!
     
     private var landmark: Landmark?
     
@@ -41,16 +34,18 @@ final class LandmarkDetailViewModel: BindableObject {
         landmark?.state ?? ""
     }
     private var cancellables: [Cancellable] = []
-    init(landmark: Landmark) {
-        let didChangeStream = didChange.map {
-            $0.landmarks.first { $0.id == landmark.id }
-        }.assign(to: \.landmark, on: self)
-        cancellables.append(didChangeStream)
-        didChange.send(self)
+
+    init(landmark: Landmark,
+         repository: Repository<Landmark>) {
+        self.repository = repository
+        let stream = repository.didChange
+            .map { $0.first { $0 == landmark } }
+            .assign(to: \.landmark, on: self)
+        cancellables.append(stream)
     }
     func preformToggleFavorite() {
-        guard let landmark = self.landmark else { return }
-        guard let index = landmarks.firstIndex(of: landmark) else { return }
-        landmarks[index].isFavorite.toggle()
+        guard var landmark = landmark else { return }
+        landmark.isFavorite.toggle()
+        repository.update(item: landmark)
     }
 }

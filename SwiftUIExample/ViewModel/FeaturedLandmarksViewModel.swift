@@ -11,10 +11,15 @@ import Combine
 
 final class FeaturedLandmarksViewModel {
     private let landmarks: [Landmark]
-    var itemViewModels: [LandmarkItemViewModel] {
-        return landmarks.map { LandmarkItemViewModel(landmark: $0) }
+    private weak var repository: Repository<Landmark>!
+    var itemViewModels: [LandmarkDetailViewModel] {
+        return landmarks.map {
+            LandmarkDetailViewModel(landmark: $0,
+                                    repository: self.repository) }
     }
-    init(landmarks: [Landmark]) {
+    init(landmarks: [Landmark],
+         repository: Repository<Landmark>) {
         self.landmarks = landmarks
+        self.repository = repository
     }
 }

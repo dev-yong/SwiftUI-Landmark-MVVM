@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct LandmarkRow : View {
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
-    var viewModel: LandmarkItemViewModel
+    @Environment(\.colorScheme)
+    var colorScheme: ColorScheme
+    var viewModel: LandmarkCellViewModel
     
     var body: some View {
         HStack {
@@ -32,7 +33,8 @@ struct LandmarkRow : View {
 #if DEBUG
 struct LandmarkRow_Previews : PreviewProvider {
     static var previews: some View {
-        LandmarkRow(viewModel: LandmarkItemViewModel(landmark: mockLandmark))
+        LandmarkRow(viewModel: LandmarkCellViewModel(landmark: mockLandmark,
+                                                     repository: mockRepository))
             .previewLayout(.fixed(width: 300, height: 70))
     }
 }

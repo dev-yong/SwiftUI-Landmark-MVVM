@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct CategoryHomeView : View {
-    @ObjectBinding var viewModel: CategoryViewModel
+    @ObjectBinding
+    var viewModel: CategoryViewModel
     var body: some View {
         NavigationView {
             List {
@@ -25,7 +26,7 @@ struct CategoryHomeView : View {
                 }
                 .listRowInsets(EdgeInsets())
                 if viewModel.landmarkListViewModel != nil {
-                    NavigationButton(destination: ContentView(viewModel: $viewModel.landmarkListViewModel)) {
+                    NavigationButton(destination: ContentView(viewModel: viewModel.landmarkListViewModel!)) {
                         Text("See All")
                     }
                 }

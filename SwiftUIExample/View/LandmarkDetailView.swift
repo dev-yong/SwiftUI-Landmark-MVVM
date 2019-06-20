@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct LandmarkDetailView: View {
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
-    var viewModel: LandmarkItemViewModel
+    @Environment(\.colorScheme)
+    var colorScheme: ColorScheme
+    var viewModel: LandmarkDetailViewModel
     
     var body: some View {
         VStack {
@@ -39,7 +40,6 @@ struct LandmarkDetailView: View {
                                 .foregroundColor(Color.gray)
                         }
                     }
-
                 }
                 HStack {
                     Text(viewModel.park)
@@ -58,7 +58,8 @@ struct LandmarkDetailView: View {
 #if DEBUG
 struct LandmarkDetailView_Previews : PreviewProvider {
     static var previews: some View {
-        return LandmarkDetailView(viewModel: LandmarkItemViewModel(landmark: mockLandmark))
+        return LandmarkDetailView(viewModel: LandmarkDetailViewModel(landmark: mockLandmark,
+                                                                     repository: mockRepository))
     }
 }
 #endif

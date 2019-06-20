@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView : View {
-    @Binding var viewModel: LandmarkListViewModel
+    var viewModel: LandmarkListViewModel
     @EnvironmentObject
     private var theme: Theme
     var body: some View {
@@ -22,7 +22,7 @@ struct ContentView : View {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: State(initialValue: LandmarkListViewModel(landmarks: [mockLandmark])).binding)
+        ContentView(viewModel: LandmarkListViewModel(repository: mockRepository))
             .environmentObject(Theme())
     }
 }

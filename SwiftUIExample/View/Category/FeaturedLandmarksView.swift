@@ -20,7 +20,8 @@ struct FeaturedLandmarksView : View {
 #if DEBUG
 struct FeaturedLandmarksView_Previews : PreviewProvider {
     static var previews: some View {
-        FeaturedLandmarksView(viewModel: FeaturedLandmarksViewModel(landmarks: [mockLandmark]))
+        FeaturedLandmarksView(viewModel: FeaturedLandmarksViewModel(landmarks: [mockLandmark],
+                                                                    repository: mockRepository))
     }
 }
 #endif

@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct CategoryItem : View {
-    var viewModel: LandmarkItemViewModel
+    var viewModel: LandmarkCellViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             Image(viewModel.imageName)
@@ -28,7 +29,8 @@ struct CategoryItem : View {
 #if DEBUG
 struct CategoryItem_Previews : PreviewProvider {
     static var previews: some View {
-        CategoryItem(viewModel: LandmarkItemViewModel(landmark: mockLandmark))
+        CategoryItem(viewModel: LandmarkCellViewModel(landmark: mockLandmark,
+                                                        repository: mockRepository))
             .previewLayout(.fixed(width: 200, height: 200))
     }
 }

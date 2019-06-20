@@ -11,47 +11,42 @@ import Combine
 
 final class LandmarkListViewModel: BindableObject {
     var didChange = PassthroughSubject<LandmarkListViewModel, Never>()
-    var toggleFavorite: ((Landmark) -> ())?
-    var removeLandmark: ((Landmark) -> ())?
     var showFavoritesOnly: Bool = false {
         didSet {
             didChange.send(self)
         }
     }
-    private var landmarks: [Landmark] {
-        didSet {
-            didChange.send(self)
-        }
-    }
-    var itemViewModels: [LandmarkItemViewModel] = [] {
-        didSet {
-            print(itemViewModels.count)
+    private weak var repository: Repository<Landmark>!
+    
+    private var displayLandmarks: [Landmark] = []
+    
+    var cellViewModels: [LandmarkCellViewModel] {
+        displayLandmarks.map {
+            LandmarkCellViewModel(landmark: $0,
+                                  repository: self.repository)
         }
     }
     
-    private var cancellabel: [Cancellable] = []
-    init(landmarks: [Landmark],
-         toggleFavorite: ((Landmark) -> ())? = nil,
-         removeLandmark: ((Landmark) -> ())? = nil) {
-        self.landmarks = landmarks
-        self.toggleFavorite = toggleFavorite
-        self.removeLandmark = removeLandmark
-        let landmarkRowViewModelsCancellabel = didChange.map { viewModel in
-            viewModel.landmarks.filter {
+    private var cancellables: [Cancellable] = []
+    init(repository: Repository<Landmark>) {
+        self.repository = repository
+        let stream = repository.didChange.combineLatest(didChange) { (items, viewModel) -> [Landmark] in
+            items.filter {
                 viewModel.showFavoritesOnly == $0.isFavorite || $0.isFavorite
-                }
-                .map {
-                    LandmarkItemViewModel(landmark: $0,
-                                          toggleFavorite: self.toggleFavorite,
-                                          removeLandmark: self.removeLandmark)
             }
-        }.assign(to: \.itemViewModels, on: self)
-        cancellabel.append(landmarkRowViewModelsCancellabel)
+        }.assign(to: \.displayLandmarks, on: self)
+        cancellables.append(stream)
+        didChange.send(self)
+    }
+    func reload() {
         didChange.send(self)
     }
     func preformRemoveLandmark(indexes: [Int]) {
-        indexes.forEach {
-            self.removeLandmark?(itemViewModels[$0].landmark)
+        indexes.map { index in
+            displayLandmarks[index]
+        }
+        .forEach {
+            repository.delete(item: $0)
         }
     }
 }
