@@ -18,7 +18,11 @@ final class LandmarkListViewModel: BindableObject {
     }
     private weak var repository: Repository<Landmark>!
     
-    private var displayLandmarks: [Landmark] = []
+    private var displayLandmarks: [Landmark] = [] {
+        didSet {
+            didChange.send(self)
+        }
+    }
     
     var cellViewModels: [LandmarkCellViewModel] {
         displayLandmarks.map {
@@ -30,15 +34,14 @@ final class LandmarkListViewModel: BindableObject {
     private var cancellables: [Cancellable] = []
     init(repository: Repository<Landmark>) {
         self.repository = repository
-        let stream = repository.didChange.combineLatest(didChange) { (items, viewModel) -> [Landmark] in
+        let stream = repository.items()
+        .combineLatest(didChange) { (items, viewModel) -> [Landmark] in
             items.filter {
                 viewModel.showFavoritesOnly == $0.isFavorite || $0.isFavorite
             }
-        }.assign(to: \.displayLandmarks, on: self)
+        }
+        .assign(to: \.displayLandmarks, on: self)
         cancellables.append(stream)
-        didChange.send(self)
-    }
-    func reload() {
         didChange.send(self)
     }
     func preformRemoveLandmark(indexes: [Int]) {

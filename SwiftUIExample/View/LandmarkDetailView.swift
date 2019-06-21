@@ -11,6 +11,7 @@ import SwiftUI
 struct LandmarkDetailView: View {
     @Environment(\.colorScheme)
     var colorScheme: ColorScheme
+    @ObjectBinding
     var viewModel: LandmarkDetailViewModel
     
     var body: some View {

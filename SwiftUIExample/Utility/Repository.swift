@@ -12,27 +12,35 @@ import Combine
 
 let mockRepository = Repository<Landmark>(key: "Landmark", default: JSONReader().load("Landmark"))
 
-class Repository<Item: Codable & Equatable>: BindableObject {
-    var didChange = CurrentValueSubject<[Item], Never>([])
-
-    @UserDefault
-    var items: [Item] {
-        didSet {
-            didChange.send(items)
+class Repository<Item: Codable & Equatable & Identifiable> {
+    private var _itemsSubject = CurrentValueSubject<[Item], Never>([])
+    
+    private var _items: [Item] {
+        get {
+            return _itemsSubject.value
         }
+        set {
+            _itemsSubject.value = newValue
+        }
+    }
+
+    func items() -> AnyPublisher<[Item], Never> {
+        return _itemsSubject.eraseToAnyPublisher()
     }
     
     init(key: String, default: [Item]) {
-        $items = UserDefault(key: key, default: `default`)
+        _items = `default`
     }
     func add(item: Item) {
-        items.append(item)
+        _items.append(item)
     }
     func delete(item: Item) {
-        items.removeAll { $0 == item }
+        _items.removeAll { $0 == item }
     }
     func update(item: Item) {
-        guard let index = items.firstIndex(of: item) else { return }
-        items[index] = item
+        guard let index = _items.firstIndex(where: { (_item) -> Bool in
+            return _item.id == item.id
+        }) else { return }
+        _items[index] = item
     }
 }

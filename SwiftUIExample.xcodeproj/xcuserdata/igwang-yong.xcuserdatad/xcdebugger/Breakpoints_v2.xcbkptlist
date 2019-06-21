@@ -274,5 +274,405 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B590D58-6CB0-470C-97AD-F4D9585E1CB3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/LandmarkDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "init(landmark:repository:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EA56950-5420-4DD0-9669-FD424E6E0E64"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/LandmarkDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "init(landmark:repository:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7EA56950-5420-4DD0-9669-FD424E6E0E64 - 83ea4004a2dd293"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIExample.LandmarkDetailViewModel.init(landmark: SwiftUIExample.Landmark, repository: SwiftUIExample.Repository&lt;SwiftUIExample.Landmark&gt;) -&gt; SwiftUIExample.LandmarkDetailViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/LandmarkDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "847">
+               </Location>
+               <Location
+                  uuid = "7EA56950-5420-4DD0-9669-FD424E6E0E64 - ab865e829150e90f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;SwiftUIExample.Landmark&gt;) -&gt; Swift.Optional&lt;SwiftUIExample.Landmark&gt; in SwiftUIExample.LandmarkDetailViewModel.init(landmark: SwiftUIExample.Landmark, repository: SwiftUIExample.Repository&lt;SwiftUIExample.Landmark&gt;) -&gt; SwiftUIExample.LandmarkDetailViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/LandmarkDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "390">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EED37A0-7A4C-4E1C-BE1E-76F273A120DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/LandmarkListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "init(repository:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C74879AA-0C7E-4918-B420-79F9C14B3671"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/LandmarkListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "init(repository:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C74879AA-0C7E-4918-B420-79F9C14B3671 - 74c3a56f583f7bde"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIExample.LandmarkListViewModel.init(repository: SwiftUIExample.Repository&lt;SwiftUIExample.Landmark&gt;) -&gt; SwiftUIExample.LandmarkListViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/LandmarkListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "871">
+               </Location>
+               <Location
+                  uuid = "C74879AA-0C7E-4918-B420-79F9C14B3671 - 206b388b1d0d7137"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;SwiftUIExample.Landmark&gt;, SwiftUIExample.LandmarkListViewModel) -&gt; Swift.Array&lt;SwiftUIExample.Landmark&gt; in SwiftUIExample.LandmarkListViewModel.init(repository: SwiftUIExample.Repository&lt;SwiftUIExample.Landmark&gt;) -&gt; SwiftUIExample.LandmarkListViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/LandmarkListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "712A828F-0039-4194-8357-270A5FCA206B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/LandmarkListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "init(repository:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "712A828F-0039-4194-8357-270A5FCA206B - 206b388b1d0d7137"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;SwiftUIExample.Landmark&gt;, SwiftUIExample.LandmarkListViewModel) -&gt; Swift.Array&lt;SwiftUIExample.Landmark&gt; in SwiftUIExample.LandmarkListViewModel.init(repository: SwiftUIExample.Repository&lt;SwiftUIExample.Landmark&gt;) -&gt; SwiftUIExample.LandmarkListViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/LandmarkListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "712A828F-0039-4194-8357-270A5FCA206B - 32d917b03ff9ce8b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUIExample.Landmark) -&gt; Swift.Bool in closure #1 (Swift.Array&lt;SwiftUIExample.Landmark&gt;, SwiftUIExample.LandmarkListViewModel) -&gt; Swift.Array&lt;SwiftUIExample.Landmark&gt; in SwiftUIExample.LandmarkListViewModel.init(repository: SwiftUIExample.Repository&lt;SwiftUIExample.Landmark&gt;) -&gt; SwiftUIExample.LandmarkListViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/LandmarkListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8CE77DA-8F3F-4751-947A-2FD15335A511"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/CategoryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C8CE77DA-8F3F-4751-947A-2FD15335A511 - 7654dc28f21fe7ae"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIExample.CategoryViewModel.init() -&gt; SwiftUIExample.CategoryViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/CategoryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1396">
+               </Location>
+               <Location
+                  uuid = "C8CE77DA-8F3F-4751-947A-2FD15335A511 - 7291413b375a71e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUIExample.CategoryViewModel) -&gt; (SwiftUIExample.FeaturedLandmarksViewModel, Swift.Array&lt;SwiftUIExample.CategoryRowViewModel&gt;, SwiftUIExample.LandmarkListViewModel) in SwiftUIExample.CategoryViewModel.init() -&gt; SwiftUIExample.CategoryViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/CategoryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "86">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E1B588E-F5F2-45FD-B1D6-2EFF16B0C706"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/CategoryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EDF6DCC9-6874-4A94-8380-A88976CE0C44"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/LandmarkListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "displayLandmarks"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D252B090-AA39-440B-8E71-3D17DD2FA061"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/CategoryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "landmarks"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2E061CD-58FE-4E1A-9783-6FC4622739F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/Utility/Repository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "init(key:default:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F92D8D7-4239-4E20-B981-3FA645619976"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/Utility/Repository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "_items"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDB30963-86CB-4DE7-978D-769EB04C284C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/Utility/Repository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "_items"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4C704CD-00AD-4E3D-8C29-4F68581959C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/Utility/Repository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "_items"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8684E04-F758-41CB-A37D-DED0BCB7E33F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/Utility/Repository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "items()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4F8FA45-8414-4784-B547-E665F0C99BCD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIExample/ViewModel/LandmarkDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "init(landmark:repository:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B4F8FA45-8414-4784-B547-E665F0C99BCD - ab865e829150e90f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;SwiftUIExample.Landmark&gt;) -&gt; Swift.Optional&lt;SwiftUIExample.Landmark&gt; in SwiftUIExample.LandmarkDetailViewModel.init(landmark: SwiftUIExample.Landmark, repository: SwiftUIExample.Repository&lt;SwiftUIExample.Landmark&gt;) -&gt; SwiftUIExample.LandmarkDetailViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/LandmarkDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "390">
+               </Location>
+               <Location
+                  uuid = "B4F8FA45-8414-4784-B547-E665F0C99BCD - 75ef27033a0d61ca"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUIExample.Landmark) -&gt; Swift.Bool in closure #1 (Swift.Array&lt;SwiftUIExample.Landmark&gt;) -&gt; Swift.Optional&lt;SwiftUIExample.Landmark&gt; in SwiftUIExample.LandmarkDetailViewModel.init(landmark: SwiftUIExample.Landmark, repository: SwiftUIExample.Repository&lt;SwiftUIExample.Landmark&gt;) -&gt; SwiftUIExample.LandmarkDetailViewModel"
+                  moduleName = "SwiftUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/SwiftUIExample/SwiftUIExample/ViewModel/LandmarkDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
