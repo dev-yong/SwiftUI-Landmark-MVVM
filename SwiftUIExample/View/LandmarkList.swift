@@ -22,6 +22,7 @@ struct LandmarkList : View {
                         .tag($0)
                 }
             }
+            
             Toggle(isOn: $viewModel.showFavoritesOnly) {
                 Text("Favorites only")
             }
