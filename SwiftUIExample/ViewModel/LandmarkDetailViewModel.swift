@@ -11,14 +11,10 @@ import Combine
 import CoreLocation
 
 final class LandmarkDetailViewModel: BindableObject {
-    var didChange = PassthroughSubject<LandmarkDetailViewModel, Never>()
+    let didChange: AnyPublisher<Void, Never>
     private weak var repository: Repository<Landmark>!
     
-    private var landmark: Landmark? {
-        didSet {
-            didChange.send(self)
-        }
-    }
+    private var landmark: Landmark?
     
     var coordinate: CLLocationCoordinate2D {
         return landmark?.locationCoordinate ?? CLLocationCoordinate2D(latitude: 0, longitude: 0)
@@ -43,6 +39,9 @@ final class LandmarkDetailViewModel: BindableObject {
     init(landmark: Landmark,
          repository: Repository<Landmark>) {
         self.repository = repository
+        didChange = repository.items().map {
+            _ in
+        }.eraseToAnyPublisher()
         let stream = repository.items()
             .map {
                 $0.first { $0.id == landmark.id }

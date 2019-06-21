@@ -45,11 +45,8 @@ final class LandmarkListViewModel: BindableObject {
         didChange.send(self)
     }
     func preformRemoveLandmark(indexes: [Int]) {
-        indexes.map { index in
-            displayLandmarks[index]
-        }
-        .forEach {
-            repository.delete(item: $0)
+        indexes.forEach { index in
+            repository.delete(item: displayLandmarks[index])
         }
     }
 }

@@ -25,10 +25,8 @@ struct CategoryHomeView : View {
                     CategoryRow(viewModel: $0)
                 }
                 .listRowInsets(EdgeInsets())
-                if viewModel.landmarkListViewModel != nil {
-                    NavigationButton(destination: ContentView(viewModel: viewModel.landmarkListViewModel!)) {
-                        Text("See All")
-                    }
+                NavigationButton(destination: ContentView(viewModel: viewModel.landmarkListViewModel)) {
+                    Text("See All")
                 }
             }.navigationBarTitle(Text("Featured"))
         }

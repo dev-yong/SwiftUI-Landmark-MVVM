@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct LandmarkDetailView: View {
-    @Environment(\.colorScheme)
-    var colorScheme: ColorScheme
     @ObjectBinding
     var viewModel: LandmarkDetailViewModel
     
@@ -35,7 +33,7 @@ struct LandmarkDetailView: View {
                     }) {
                         if viewModel.isFavorite {
                             Image(systemName: "star.fill")
-                                .foregroundColor(colorScheme == .light ? .yellow : .white)
+                                .foregroundColor(.yellow)
                         } else {
                             Image(systemName: "star")
                                 .foregroundColor(Color.gray)
